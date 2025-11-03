@@ -1,2 +1,3 @@
-z<-file('q:/ZEISS/test200.img','rb')
-y<-readBin(z,integer(),n=200*200*1200,size=1)
+z<-file('q:/ZEISS/test200.img','rb') #or wherever you have this file
+y<-readBin(z,integer(),n=200*1024*200,size=1)
+image(t(y[100,,]))
